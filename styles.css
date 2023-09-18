@@ -1,0 +1,702 @@
+body {
+  font: 400 15px/1.8 Lato, sans-serif;
+  color: #b73838;
+  background: url("assets/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  /* Other background properties if needed */
+  color: #fff;
+  background-repeat: repeat;
+}
+h3,
+h4 {
+  margin: 10px 0 30px 0;
+  letter-spacing: 10px;
+  font-size: 20px;
+  color: #111;
+}
+.container {
+  padding: 80px 80px;
+  overflow: hidden; /* clear any floated elements */
+}
+.person {
+  border: 10px solid transparent;
+  margin-bottom: 25px;
+  width: 80%;
+  height: 80%;
+  opacity: 0.7;
+}
+.person:hover {
+  border-color: #f1f1f1;
+}
+
+#myCarousel {
+  max-width: 800px; /* adjust the width as needed */
+  margin: 70px auto; /* center the carousel */
+  position: relative;
+  flex: 1;
+}
+
+.carousel-inner {
+  width: 100%;
+  max-height: 400px; /* adjust the height as needed */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-inner > .item > img {
+  width: 50%;
+  max-height: 400px; /* adjust the height as needed */
+}
+
+.carousel-inner img {
+  -webkit-filter: grayscale(90%);
+  filter: grayscale(90%); /* make all photos black and white */
+  width: 0%; /* Set width to 100% */
+  margin: 20;
+}
+.carousel-caption {
+  position: absolute;
+  max-height: 400px;
+  max-width: 400px;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  transform: translateX(60%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  color: #fff;
+}
+
+.carousel-caption h3 {
+  color: #d54545 !important;
+}
+@media (max-width: 500px) {
+  .carousel-caption {
+    display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+  }
+}
+.bg-1 {
+  background: #010192;
+  color: #bdbdbd;
+}
+.bg-1 h3 {
+  color: #d93e3e;
+}
+.bg-1 p {
+  font-style: italic;
+}
+.list-group-item:first-child {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.list-group-item:last-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.thumbnail {
+  padding: 0 0 15px 0;
+  border: none;
+  border-radius: 0;
+}
+.thumbnail p {
+  margin-top: 15px;
+  color: #555;
+}
+.btn {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #f1f1f1;
+  border-radius: 0;
+  transition: 0.2s;
+}
+.btn:hover,
+.btn:focus {
+  border: 1px solid #333;
+  background-color: #fff;
+  color: #000;
+}
+.modal-header,
+h4,
+.close {
+  background-color: #333;
+  color: #fff !important;
+  text-align: center;
+  font-size: 30px;
+}
+.modal-header,
+.modal-body {
+  padding: 40px 50px;
+}
+.nav-tabs li a {
+  color: #777;
+}
+
+.navbar {
+  font-family: Montserrat, sans-serif;
+  margin-bottom: 0;
+  font-size: 11px !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  letter-spacing: 4px;
+  opacity: 0.9;
+}
+
+.navbar li a,
+.navbar .navbar-brand {
+  color: #f3f300f1 !important;
+}
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px; /* set the height to the desired value */
+  z-index: 9999;
+}
+
+.navbar-nav > li {
+  float: none;
+  display: inline-block;
+}
+.navbar-nav li a:hover {
+  color: #ffffff !important;
+}
+.navbar-nav li.active a {
+  color: #d5c10c !important;
+  background-color: transparent !important;
+  letter-spacing: 2px;
+
+  border-radius: 10%;
+}
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+}
+
+.navbar-nav li a.favorites-btn {
+  background-color: rgb(9, 2, 49) !important;
+  color: #d5c10c !important;
+  font-size: 11px !important;
+  letter-spacing: 4px;
+  border-radius: 10%;
+  opacity: 0.9;
+  padding: 10px;
+  font-size: 18px;
+  line-height: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-nav li.active a.favorites-btn {
+  background-color: #41419e !important;
+  color: #f3f300f1 !important;
+}
+
+.navbar-nav li a.favorites-btn {
+  /* existing CSS rules */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  background-color: #2d2d30;
+  color: #f5f5f5;
+  padding: 32px;
+}
+footer a {
+  color: #f5f5f5;
+}
+footer a:hover {
+  color: #777;
+  text-decoration: none;
+}
+.form-control {
+  border-radius: 0;
+}
+textarea {
+  resize: none;
+}
+
+.navbar-form {
+  width: 70%; /* Adjust the width of the search bar */
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.input-group-btn {
+  margin-left: -1px;
+}
+
+.btn-default {
+  color: #333;
+  background-color: transparent;
+  border-color: #ccc;
+}
+
+.btn-default:hover {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border-radius: 10px; /* add px unit to border-radius */
+  margin: 0 10px; /* use shorthand margin property */
+  width: 100%;
+  max-width: 600px; /* add max-width to limit the size on larger screens */
+}
+
+.search-bar form {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 2px;
+  margin: 0 10px; /* use shorthand margin property */
+  background-color: rgb(9, 2, 49);
+  flex: 1; /* add flex property to take remaining space */
+}
+
+.search-bar input[type="text"] {
+  border: none;
+  outline: none;
+  width: 100%; /* use width property to fill remaining space */
+  height: auto;
+  border-radius: 15px;
+
+  padding: 2px 40px;
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.search-bar button {
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  color: #f3f300f1;
+}
+
+.notification-btn {
+  background-color: transparent;
+  color: #f3f300f1;
+  border: none;
+  padding: 10px 16px;
+  font-size: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 5 5px; /* use shorthand margin property */
+}
+
+.notification-btn:hover {
+  background-color: #68d3ba;
+}
+
+.fa.fa-microphone {
+  font-size: 24px;
+  margin-right: 10px; /* increase margin for spacing */
+  background: transparent;
+  color: #f3f300f1;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 40px; /* reduce size to make it more responsive */
+  height: 40px; /* reduce size to make it more responsive */
+  border-radius: 50%; /* use 50% to make it circular */
+  overflow: hidden; /* hide any content that overflows the element */
+  white-space: nowrap; /* prevent line breaks within the element */
+  text-overflow: ellipsis; /* add an ellipsis (...) to indicate truncated content */
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.navbar-header {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-left: 1px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.carousel {
+  width: 70%;
+}
+
+.aside-queue {
+  width: 30%;
+  position: sticky;
+  top: 0;
+  right: 0;
+}
+.play-btn {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #3f2b96 0%, #a8c0ff 100%);
+  border-radius: 5%;
+  border: 10;
+  height: 70px;
+  width: 1000px;
+  cursor: pointer;
+  padding: 2;
+}
+
+.recently-btn {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #3f2b96 0%, #a8c0ff 100%);
+  border-radius: 5%;
+  border: 10;
+  height: 70px;
+  width: 415px;
+  cursor: pointer;
+  padding: 2;
+}
+
+.album-btn {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #1cb5e0 0%, #000851 100%);
+  border-radius: 5%;
+  border: 10;
+  height: 70px;
+  width: 450px;
+  cursor: pointer;
+  padding: 2;
+}
+
+.album-info {
+  margin-left: 30px;
+  position: sticky;
+  top: 10px;
+  left: 80px;
+}
+
+.album-btn:hover .image-container {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.album-btn:hover .album-info {
+  color: #1db954;
+}
+
+.music-list-container {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  margin-left: 80px;
+  clear: both;
+}
+
+.sidebar-queue {
+  position: fixed;
+  top: 55px;
+  right: 0;
+  height: calc(100% - 50px);
+  background-color: #202124;
+  overflow-y: scroll;
+  width: 220px;
+  flex: 0 0 200px;
+}
+
+.sidebar-queue h3 {
+  margin-top: 0;
+  padding: 10px;
+  background-color: #04052a;
+  border-radius: 15%;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sidebar-queue ul {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-queue li {
+  list-style: none;
+  background-color: #202124;
+  padding: 10px;
+  color: #e82d10;
+  font-size: 16px;
+}
+
+.sidebar-queue li:last-child {
+  border-bottom: none;
+}
+#queueDropdown.btn-default {
+  background-color: #333; /* replace with desired background color */
+  color: #fff; /* replace with desired font color */
+}
+.artist-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  margin-right: 50px;
+}
+
+.artist-box {
+  width: 340px;
+  height: 200px;
+  margin: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.artist-box img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(90%); /* make all photos black and white */
+}
+
+.artist-popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(150, 8, 8);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+}
+
+.artist-popup h3 {
+  margin-bottom: 10px;
+}
+
+.artist-box:hover .artist-popup {
+  display: flex;
+}
+
+.artist-box.active {
+  border: 2px solid blue;
+}
+
+#song-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.song-tile {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background: linear-gradient(to right, #16222a 10%, #071e2c 51%, #03253b 100%);
+
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.song-tile:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+
+  background: linear-gradient(
+    to right,
+    rgb(21, 6, 97) 10%,
+    #1b226d 51%,
+    rgb(9, 9, 111) 100%
+  );
+}
+
+.song-tile img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  border-radius: 10%;
+  object-fit: cover;
+}
+
+.song-details h3 {
+  font-size: 20px;
+  color: #d5c10c;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.play-button {
+  font-size: 24px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #07afed;
+  margin-right: 10px;
+}
+
+.play-button:hover {
+  transform: scale(1.05);
+  color: linear-gradient(
+    to right,
+    rgb(21, 6, 97) 10%,
+    #1b226d 51%,
+    rgb(9, 9, 111) 100%
+  );
+}
+
+.like-button {
+  font-size: 24px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.like-button cursor {
+  color: red;
+}
+
+.like-button:hover {
+  transform: scale(1.25);
+  color: red;
+  background-color: transparent;
+}
+
+.like-button .fa-heart-o:hover {
+  color: red;
+}
+
+.like-button .fa-heart-o {
+  color: #0f95dd;
+}
+
+.audio-player {
+  display: none;
+}
+
+.audio-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #002857;
+  color: #a7f4ea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.audio-player audio {
+  display: none;
+}
+
+.audio-player .controls {
+  display: flex;
+  align-items: center;
+}
+
+.audio-player button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.audio-player input[type="range"] {
+  width: 100%;
+  height: 3px;
+  background-color: #777;
+  outline: none;
+  margin: 0 10px;
+}
+
+.audio-player input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.audio-player span {
+  font-size: 16px;
+}
+
+.add-button {
+  /* CSS styles go here */
+  font-size: 30px;
+  background-color: transparent;
+  border-color: transparent;
+  color: #07afed;
+}
+.add-button:hover {
+  transform: scale(1.25);
+}
+
+.song-tile.playing img {
+  animation: pulse1 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulse1 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.song-tile.playing {
+  transform: scale(1.05);
+
+  background: linear-gradient(
+    to right,
+    rgb(11, 76, 30) 10%,
+    rgb(27, 102, 48) 20%,
+    rgb(33, 62, 45) 100%
+  );
+  animation: pulse 3s ease-in-out infinite;
+}
+@keyframes pulse {
+  0% {
+    background-size: 100% 150%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 100%;
+    background-position: right center;
+  }
+  100% {
+    background-size: 100% 150%;
+    background-position: left center;
+  }
+}

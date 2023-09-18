@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AC/DC</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-Go5fPNjKf5i5WQm8JY/KhGgm2DMhqSDIMvPdW0hMPT0iHrkA1FrzvZ0WwOy4tAJhJt9p4t4qWqmn5i5kgIBhCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <style>
+  .navbar { 
+    background-color: #231e1e;
+    }
+  </style>
+</head>
+
+
+<body id="HomePage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+
+    <div class="container-fluid">
+      <div class="navbar-header">
+      <img src="assets/logo.png" alt="Logo" class="logo">
+    </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="index.html">Music <br>Player</a></li>
+          <li><a href="#Favorites" class="favorites-btn">Favorites</a></li>          
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          
+          
+          <li>
+            
+            <div class="search-bar">
+              
+              <form>
+                <input type="text" placeholder="Search music,album,band...">
+                <button type="submit"><i class="fa fa-search"></i></button>
+                <button type="button"><i class="fa fa-microphone"></i></button>
+
+              </form>
+              <button class="notification-btn">
+                <i class="fa fa-bell"></i>
+              </button>
+
+            
+            
+          </li>
+          <img src="assets/profile-pic.jpg" alt="Avatar" class="avatar">
+
+            
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+    
+    
+
+<div class="main-container">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">   
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="assets/ACDC.jpg" alt="AC/DC" width="600" height="300">
+        <div class="carousel-caption">
+          <h3>AC/DC</h3>
+          <p>AC/DC are an Australian rock band formed in Sydney in 1973 by
+            Scottish-born Australian brothers Malcolm (rhythm guitar) and Angus Young (lead guitar)</p>
+          <button class="btn btn-success">Follow</button>
+        </div>      
+      </div>
+    </div>
+    <div id="song-container">
+      <ul id="song-list">
+
+        <li>
+          <div class="song-tile">
+            <img src="assets/ACDC.jpg" alt="ACDC thumbnail" >
+            <div class="song-details">
+              <h3>AC/DC - Back In Black</h3>
+              <audio id="ImagineDragons-Demons-audio" src="music/ACDC/ACDC-BackInBlack.mp3"></audio>
+              <button class="like-button"><i class="fa fa-heart-o"></i></button>
+              <button class="add-button"><i class="fa fa-plus"></i></button>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="song-tile">
+            <img src="assets/ACDC.jpg" alt="ACDC thumbnail" >
+            <div class="song-details">
+              <h3>AC/DC - Place Holder</h3>
+              <audio id="ImagineDragons-Believer-audio" src="music/ACDC/ACDC-BackInBlack.mp3"></audio>
+              <button class="like-button"><i class="fa fa-heart-o"></i></button>
+              <button class="add-button"><i class="fa fa-plus"></i></button>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="song-tile">
+            <img src="assets/ACDC.jpg" alt="ACDC thumbnail" >
+            <div class="song-details">
+              <h3>AC/DC - Place Holder</h3>
+              <audio id="ImagineDragons-Warriors-audio" src="music/ACDC/ACDC-BackInBlack.mp3"></audio>
+              <button class="like-button"><i class="fa fa-heart-o"></i></button>
+              <button class="add-button"><i class="fa fa-plus"></i></button>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="song-tile">
+            <img src="assets/ACDC.jpg" alt=ACDC thumbnail" >
+            <div class="song-details">
+              <h3>AC/DC - Place Holder</h3>
+              <audio id="ImagineDragons-Thunder-audio" src="music/ImagineDragons/ImagineDragons-Thunder.mp3"></audio>
+              <button class="like-button"><i class="fa fa-heart-o"></i></button>
+              <button class="add-button"><i class="fa fa-plus"></i></button>
+            </div>
+          </div>
+        </li>
+        <!-- Add more items as needed -->
+      </ul>
+    </div>
+
+
+
+
+<div class="audio-player">
+  <audio id="audio" src=""></audio>
+  <div class="controls">
+    <button class="play-button2"><i class="fa fa-play"></i></button>
+    <button id="pause-btn"><i class="fa fa-pause"></i></button>
+    <button id="stop-btn"><i class="fa fa-stop-circle"></i></button>
+
+    <input id="seek-slider" type="range" min="0" max="100" value="0">
+    <span id="current-time">00:00</span>/<span id="duration">00:00</span>
+    <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="1">
+
+  </div>
+</div>
+
+</div>
+  
+
+<div class="sidebar-queue">
+  <h2>Similar Artists</h2>
+  <ul class="artist-tiles">
+          <li><a href="Artist01_ImagineDragons.html">Imagine Dragons</a></li>
+          <li><a href="Artist02_GreenDay.html">AC/DC</a></li>
+      <!-- Add more artist tiles as needed -->
+  </ul>
+  <h2>Recently Played</h2>
+  <ul class= "artist-tiles">
+          <li><a href="Artist02_GreenDay.html">Green Day</a></li>
+          <li><a href="Artist01_ImagineDragons.html">Imagine Dragons</a></li>
+      <!-- Add more artist tiles as needed -->
+  </ul>
+</div>
+<script>
+  // Get the list of artist links
+  const artistLinks = document.querySelectorAll('.artist-link');
+
+  // Function to handle tile click event
+  function loadArtistPage(event) {
+      event.preventDefault(); // Prevent the default link behavior
+      const artistName = this.textContent; // Get the artist name from the clicked tile
+      // You can load the artist's page or perform any other action here
+      console.log(`Loading ${artistName}'s page...`);
+  }
+
+  // Add a click event listener to each artist tile
+  artistLinks.forEach(artistLink => {
+      artistLink.addEventListener('click', loadArtistPage);
+  });
+</script>
+<style>
+  /* Styles for the sidebar */
+  .sidebar-queue {
+      background-color: #013742;
+      padding: 20px;
+      border-right: 1px solid #ddd;
+      box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+      height: 100vh; /* Adjust the height as needed */
+      overflow-y: auto; /* Add scrollbar when content overflows */
+  }
+
+  .sidebar-queue h2 {
+    font-family: Montserrat, sans-serif;
+
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: rgba(156, 145, 123, 0.999);
+  }
+
+  .artist-tiles {
+      list-style: none;
+      padding: 0;
+  }
+
+  .artist-tiles li {
+      margin-bottom: 10px;
+  }
+
+  .artist-link {
+      display: block;
+      padding: 10px 15px;
+      background-color: rgba(63, 10, 104, 0.889);
+      border: 1px solid rgba(28, 12, 53, 0.786);
+      border-radius: 5px;
+      text-decoration: none;
+      color: rgb(143, 114, 114);
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
+  }
+
+  .artist-link:hover {
+      background-color: #333;
+      color: #fff;
+  }
+</style> 
+  
+  
+ 
+
+  
+  
+  
+
+
+
+<script>
+
+  
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#HomePage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+
+//Player Engine
+const songTiles = document.querySelectorAll('.song-tile');
+const audioPlayer = document.querySelector('#audio');
+const playButton = document.querySelector('.play-button2');
+const pauseButton = document.querySelector('#pause-btn');
+const seekSlider = document.querySelector('#seek-slider');
+const currentTimeDisplay = document.querySelector('#current-time');
+const durationDisplay = document.querySelector('#duration');
+const stopButton = document.querySelector('#stop-btn');
+const volumeSlider = document.querySelector('#volume-slider');
+
+
+
+let currentSong = null;
+
+// Function to play the selected song in the audio player
+function playSong(song) {
+  if (currentSong !== null) {
+    currentSong.classList.remove('playing');
+    currentSong.classList.add('paused');
+    audioPlayer.pause();
+  }
+
+  const songDetails = song.querySelector('.song-details');
+  const songTitle = songDetails.querySelector('h3').textContent;
+  const songAudio = songDetails.querySelector('audio');
+  const songSrc = songAudio.getAttribute('src');
+
+  currentSong = song;
+  currentSong.classList.add('playing');
+  currentSong.classList.remove('paused');
+
+  audioPlayer.setAttribute('src', songSrc);
+  audioPlayer.load();
+  audioPlayer.play();
+
+  document.title = songTitle;
+  
+}
+
+// Add click event listeners to each song tile
+songTiles.forEach(songTile => {
+  songTile.addEventListener('click', () => {
+    playSong(songTile); 
+    currentSong.classList.add('playing');
+
+    
+  });
+});
+
+
+// Add click event listener to the play button
+playButton.addEventListener('click', () => {
+  audioPlayer.play();
+  currentSong.classList.add('playing');
+
+});
+
+// Add click event listener to the pause button
+pauseButton.addEventListener('click', () => {
+  audioPlayer.pause();
+  currentSong.classList.add('paused');
+
+});
+
+// Update the seek slider and time displays as the audio plays
+audioPlayer.addEventListener('timeupdate', () => {
+  const duration = audioPlayer.duration;
+  const currentTime = audioPlayer.currentTime;
+
+  seekSlider.value = (currentTime / duration) * 100;
+  currentTimeDisplay.textContent = formatTime(currentTime);
+  durationDisplay.textContent = formatTime(duration);
+});
+
+
+stopButton.addEventListener('click', () => {
+  audioPlayer.pause();
+  audioPlayer.currentTime = 0;
+  currentSong.classList.remove('playing');
+  currentSong.classList.add('paused');
+});
+
+
+// Update the audio player's time when the seek slider is adjusted
+seekSlider.addEventListener('input', () => {
+  const duration = audioPlayer.duration;
+  const seekTime = (seekSlider.value / 100) * duration;
+
+  audioPlayer.currentTime = seekTime;
+});
+
+// Function to format the audio player's time displays
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  const seconds = Math.floor(time % 60);
+
+  return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+}
+
+
+audioPlayer.addEventListener('play', () => {
+  currentSong.classList.add('playing');
+});
+
+audioPlayer.addEventListener('pause', () => {
+  currentSong.classList.remove('playing');
+});
+
+audioPlayer.addEventListener('ended', () => {
+  currentSong.classList.remove('playing');
+});
+
+volumeSlider.addEventListener('input', () => {
+  audioPlayer.volume = volumeSlider.value;
+});
+
+
+//Recently Played
+
+
+
+
+</script>
+
+</body>
+</html>
